@@ -20,6 +20,7 @@ export default class GetStartedPage extends BasePage {
 
     async clickInterestedBothButton(): Promise<void> {
         await webActions.clickElement(GetStartedPageObjects.CUSTOMER_REQUIRES_CHECKBOX);
+        await expect(this.page.locator(GetStartedPageObjects.CUSTOMER_REQUIRES_CHECKBOX).isChecked()).toBeTruthy();
     }
 
     async clickCardMachineButton(choice: string): Promise<void> {
@@ -51,6 +52,7 @@ export default class GetStartedPage extends BasePage {
     }
 
     async clickSubmitButton(): Promise<void> {
+        await this.page.hover(GetStartedPageObjects.SUBMIT_BUTTON);
         await webActions.clickElement(GetStartedPageObjects.SUBMIT_BUTTON);
     }
 
@@ -66,7 +68,7 @@ export default class GetStartedPage extends BasePage {
         await this.clickSubmitButton();
     }
 
-    async checkErrorMessageForEmptyBusinessPostcode(): Promise<void>{
+    async checkErrorMessageForEmptyBusinessPostcode(): Promise<void> {
         const errorMsg = await this.page.locator(GetStartedPageObjects.ERROR_MSG_BUSINESS_POST_CODE).textContent();
         await expect(errorMsg).toContain(GetStartedPageObjects.ERROR_MSG_BUSINESS_POST_CODE_TXT);
     }

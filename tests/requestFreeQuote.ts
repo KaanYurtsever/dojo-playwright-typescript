@@ -3,7 +3,7 @@ import {testConfig} from "../testConfig";
 
 test.describe("Dojo Automation", () => {
 
-    test("Request free quote failure for business postcode @reg",  async ({basePage, getStartedPage}) => {
+    test("Request free quote for failure for business postcode @reg",  async ({basePage, getStartedPage}) => {
 
         await test.step("User goes to URL", async () => {
             await basePage.navigateToURL();
@@ -12,7 +12,7 @@ test.describe("Dojo Automation", () => {
             await basePage.goToGetStartedPage();
         })
 
-        await test.step("User requests free quote failure ", async () =>{
+        await test.step("User requests free quote for failure ", async () =>{
             await getStartedPage.checkGetStartedPageIsOpen();
             await getStartedPage.requestFreeQuoteForInterestedBoth(
                 testConfig.cardMachineNo,

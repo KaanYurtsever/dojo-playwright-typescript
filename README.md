@@ -7,6 +7,7 @@ Test steps;
 - Assert the error message
 ## Video of the test
 
+[13acc7b66fa7b1614189f5fa21d6ddffd8667ac1.webm](https://user-images.githubusercontent.com/89412371/204102256-6316146b-5e09-4ab9-93e5-9eb38d69d518.webm)
 
 
 ## How to run the scenario?

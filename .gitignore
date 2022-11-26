@@ -1,0 +1,8 @@
+node_modules/
+allure-report/
+html-report/
+html-report.zip/
+.idea
+test-result.json
+report.zip
+
